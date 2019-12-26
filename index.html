@@ -24,6 +24,11 @@
             }
 
             function updateAll() {
+                moveAll();
+                drawAll();
+            }
+
+            function moveAll() {
                 ballX += ballSpeedX;
                 ballY += ballSpeedY;
 
@@ -33,9 +38,9 @@
                 if (ballY > canvas.height || ballY < 0) {
                     ballSpeedY *= -1;
                 }
+            }
 
-                console.log(ballX);
-
+            function drawAll() {
                 canvasContext.fillStyle = 'black';
                 canvasContext.fillRect(0, 0, canvas.width, canvas.height);
 
